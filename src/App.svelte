@@ -7,6 +7,7 @@
   import marked from "marked";
   import DOMPurify from "dompurify";
   import imgUrl from "./assets/cover.png";
+  // import { wordLength } from "./lib/functions";
   let source;
   let defaultText = `
    ![Markyll Logo](${imgUrl})
@@ -15,21 +16,24 @@
  You can learn more about markdown [here](https://www.markdown.com)
 
  PS: markdown also supports some html tags too!😉
+
   `;
 
-  // $: markdown = marked(source);
+  $: wordLength = source ? source.toString().split(" ").length : 0;
+  $: charLength = source ? source.toString().split("").length : 0;
 </script>
 
 <div class="w-screen h-screen bg-red-100 fixed">
-  <TheNavbar />
+  <TheNavbar {wordLength} {charLength} />
   <main
-    class="flex h-[80vh] w-full justify-around border-t-2 border-dashed border-red-300"
+    class="flex h-[80vh] min-w-full justify-between border-t-2 border-dashed border-red-300"
   >
     <TheMarkdownEditor>
       <textarea
+        id="textarea"
         bind:value={source}
-        placeholder="Enter your Markdown 👍🏾👍🏾👍🏾"
-        class="bg-red-100 text-red-400 min-w-full scrollbar scrollbar-w-2 scrollbar-thumb-red-300  scrollbar-thumb-rounded-[9999px] scrollbar-track-red-100  !min-h-full !max-h-full !border-none prose overflow-auto !outline-none p-8 placeholder-opacity-40 placeholder-red-400 font-mono text-2xl"
+        placeholder="Enter your Markdown 👍🏾"
+        class="bg-red-100 text-red-400 min-w-full scrollbar scrollbar-w-2 scrollbar-thumb-red-300 prose scrollbar-thumb-rounded-[9999px] scrollbar-track-red-100  !min-h-full !max-h-full !border-none prose overflow-auto !outline-none p-8 placeholder-opacity-40 placeholder-red-400 font-mono text-2xl"
       />
     </TheMarkdownEditor>
     <TheMarkdownPreview>
@@ -40,7 +44,7 @@
       {/if}
     </TheMarkdownPreview>
   </main>
-  <div class="h-full  border-t-2 border-dashed border-red-300">
+  <div class="!min-h-[100%]  border-t-2 border-dashed border-red-300">
     <TheFooter />
   </div>
 </div>

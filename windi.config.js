@@ -16,8 +16,8 @@ export default defineConfig({
     btn: "py-1 px-4  rounded-lg font-bold shadow-md transition-all ease-linear duration-150",
     "btn-green": "text-green-50 bg-green-500 hover:bg-green-700",
     "btn-red": "text-red-50 bg-red-500 hover:bg-red-700",
-    "btn-pink": "text-pink-50 bg-red-500 hover:bg-red-700",
-    "btn-black": "text-gray-50 bg-black hover:bg-gray-700",
+    "btn-red": "text-red-50 bg-red-500 hover:bg-red-700",
+    "btn-black": "text-red-50 bg-black hover:bg-gray-700",
   },
   plugins: [
     require("windicss/plugin/typography"),
