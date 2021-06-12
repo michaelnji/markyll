@@ -23,17 +23,17 @@
   $: charLength = source ? source.toString().split("").length : 0;
 </script>
 
-<div class="w-screen h-screen bg-red-100 fixed">
+<div class="w-screen h-screen dark fixed app">
   <TheNavbar {wordLength} {charLength} />
   <main
-    class="flex h-[80vh] min-w-full justify-between border-t-2 border-dashed border-red-300"
+    class="flex h-[80vh] min-w-full justify-between border-t-2 border-dashed border-red-300 dark:border-gray-400"
   >
     <TheMarkdownEditor>
       <textarea
         id="textarea"
         bind:value={source}
         placeholder="Enter your Markdown 👍🏾"
-        class="bg-red-100 text-red-400 min-w-full scrollbar scrollbar-w-2 scrollbar-thumb-red-300 prose scrollbar-thumb-rounded-[9999px] scrollbar-track-red-100  !min-h-full !max-h-full !border-none prose overflow-auto !outline-none p-8 placeholder-opacity-40 placeholder-red-400 font-mono text-2xl"
+        class="bg-red-100 dark:bg-gray-700 dark:text-red-50  text-red-400 min-w-full scrollbar scrollbar-w-2 scrollbar-thumb-red-300 dark:scrollbar-thumb-gray-400 prose scrollbar-thumb-rounded-[9999px] scrollbar-track-red-100 dark:scrollbar-track-gray-300 !min-h-full !max-h-full !border-none prose overflow-auto !outline-none p-8 placeholder-opacity-40 placeholder-red-400 font-mono text-2xl dark:text-opacity-90 dark:placeholder-red-50 dark:placeholder-opacity-60"
       />
     </TheMarkdownEditor>
     <TheMarkdownPreview>
@@ -44,7 +44,15 @@
       {/if}
     </TheMarkdownPreview>
   </main>
-  <div class="!min-h-[100%]  border-t-2 border-dashed border-red-300">
+  <div
+    class="!min-h-[100%]  border-t-2 border-dashed border-red-300 dark:border-gray-400"
+  >
     <TheFooter />
   </div>
 </div>
+
+<style>
+  .app.dark {
+    @apply bg-gray-700;
+  }
+</style>
