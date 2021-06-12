@@ -1,65 +1,46 @@
 <script>
-  import logo from './assets/svelte.png'
-  import Counter from './lib/Counter.svelte'
+  // import { onMount } from "svelte";
+  import TheFooter from "./components/TheFooter.svelte";
+  import TheMarkdownEditor from "./components/TheMarkdownEditor.svelte";
+  import TheMarkdownPreview from "./components/TheMarkdownPreview.svelte";
+  import TheNavbar from "./components/TheNavbar.svelte";
+  import marked from "marked";
+  import DOMPurify from "dompurify";
+  import imgUrl from "./assets/cover.png";
+  let source;
+  let defaultText = `
+   ![Markyll Logo](${imgUrl})
+
+ This is a minimalist Markdown editor built using [Svelte](https://www.svelte.dev) and [windicss](https://www.windicss.org) by [Michael Nji](https://www.github.com/michaelnji). <br>
+ You can learn more about markdown [here](https://www.markdown.com)
+
+ PS: markdown also supports some html tags too!😉
+  `;
+
+  // $: markdown = marked(source);
 </script>
 
-<main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello world!</h1>
-
-  <Counter />
-
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
-</main>
-
-<style>
-  :root {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
-  main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
-  }
-
-  img {
-    height: 16rem;
-    width: 16rem;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
-  }
-
-  p {
-    max-width: 14rem;
-    margin: 1rem auto;
-    line-height: 1.35;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
-    p {
-      max-width: none;
-    }
-  }
-</style>
+<div class="w-screen h-screen bg-red-100 fixed">
+  <TheNavbar />
+  <main
+    class="flex h-[80vh] w-full justify-around border-t-2 border-dashed border-red-300"
+  >
+    <TheMarkdownEditor>
+      <textarea
+        bind:value={source}
+        placeholder="Enter your Markdown 👍🏾👍🏾👍🏾"
+        class="bg-red-100 text-red-400 min-w-full scrollbar scrollbar-w-2 scrollbar-thumb-red-300  scrollbar-thumb-rounded-[9999px] scrollbar-track-red-100  !min-h-full !max-h-full !border-none prose overflow-auto !outline-none p-8 placeholder-opacity-40 placeholder-red-400 font-mono text-2xl"
+      />
+    </TheMarkdownEditor>
+    <TheMarkdownPreview>
+      {#if source}
+        {@html DOMPurify.sanitize(marked(source))}
+      {:else}
+        {@html DOMPurify.sanitize(marked(defaultText))}
+      {/if}
+    </TheMarkdownPreview>
+  </main>
+  <div class="h-full  border-t-2 border-dashed border-red-300">
+    <TheFooter />
+  </div>
+</div>
