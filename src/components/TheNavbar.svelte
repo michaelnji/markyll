@@ -1,7 +1,7 @@
 <script>
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
-
+  // Dispatches an event toggleDarkMode, which is listened to and used to toggle dark mode in app component
   let toggleDarkMode = () => {
     dispatch("toggleDarkMode");
   };

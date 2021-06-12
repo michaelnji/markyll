@@ -2,7 +2,7 @@
   import logo from "../assets/logo.png";
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
-
+  // Dispatches an event toggleDarkMode, which is listened to and used to toggle dark mode in app component
   let toggleDarkMode = () => {
     dispatch("toggleDarkMode");
   };
@@ -33,7 +33,7 @@
       <li>
         <a
           href="https://www.github.com/michaelnji/markyll"
-          class="btn btn-black mx-3">🦊Github</a
+          class="btn btn-black py-3 mx-3">🦊Github</a
         >
       </li>
     </ul>
