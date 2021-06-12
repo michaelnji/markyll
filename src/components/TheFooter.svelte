@@ -1,5 +1,12 @@
 <script>
   import logo from "../assets/logo.png";
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
+
+  let toggleDarkMode = () => {
+    dispatch("toggleDarkMode");
+  };
+  export let isDark;
 </script>
 
 <footer
@@ -14,10 +21,21 @@
       <li>
         <button
           class="btn btn-red px-2 text-2xl hidden md:inline-block dark:bg-gray-700"
-          >☀️</button
+          on:click={toggleDarkMode}
+        >
+          {#if isDark}
+            🌙
+          {:else}
+            ☀️
+          {/if}
+        </button>
+      </li>
+      <li>
+        <a
+          href="https://www.github.com/michaelnji/markyll"
+          class="btn btn-black mx-3">🦊Github</a
         >
       </li>
-      <li><a href="#" class="btn btn-black mx-3">🦊Github</a></li>
     </ul>
   </nav>
 </footer>

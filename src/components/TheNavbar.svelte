@@ -1,6 +1,13 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
+
+  let toggleDarkMode = () => {
+    dispatch("toggleDarkMode");
+  };
   export let wordLength;
   export let charLength;
+  export let isDark;
 </script>
 
 <header
@@ -88,9 +95,16 @@
   <div
     class="flex lg:!max-w-[30%] w-full py-2   h-full items-center justify-end"
   >
-    <button class="btn  mr-4 bg-red-300 inline-block dark:bg-gray-700 md:hidden"
-      >☀️</button
+    <button
+      class="btn  mr-4 bg-red-300 inline-block dark:bg-gray-700 md:hidden"
+      on:click={toggleDarkMode}
     >
+      {#if isDark}
+        🌙
+      {:else}
+        ☀️
+      {/if}
+    </button>
     <div
       class="font-semibold text-xl text-center text-red-400 font-mono dark:text-gray-900 mr-8"
     >

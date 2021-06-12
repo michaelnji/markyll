@@ -1,5 +1,5 @@
 <script>
-  // import { onMount } from "svelte";
+  import { onMount } from "svelte";
   import TheFooter from "./components/TheFooter.svelte";
   import TheMarkdownEditor from "./components/TheMarkdownEditor.svelte";
   import TheMarkdownPreview from "./components/TheMarkdownPreview.svelte";
@@ -7,7 +7,30 @@
   import marked from "marked";
   import DOMPurify from "dompurify";
   import imgUrl from "./assets/cover.png";
-  // import { wordLength } from "./lib/functions";
+  const db = localStorage;
+  let isDark = false;
+  onMount(() => {
+    if (db.getItem("MARKYLL_DARK_MODE") == null) {
+      db.setItem("MARKYLL_DARK_MODE", "false");
+    } else {
+      isDark = JSON.parse(db.getItem("MARKYLL_DARK_MODE"));
+      toggleTheme(isDark);
+    }
+  });
+  let toggleTheme = (val) => {
+    if (val) {
+      document.querySelector(".app").className =
+        "w-screen h-screen fixed dark app";
+    } else {
+      document.querySelector(".app").className = "w-screen h-screen  fixed app";
+    }
+  };
+
+  let toggleThemeValue = () => {
+    isDark = !isDark;
+    db.setItem("MARKYLL_DARK_MODE", JSON.stringify(isDark));
+    toggleTheme(isDark);
+  };
   let source;
   let defaultText = `
    ![Markyll Logo](${imgUrl})
@@ -24,7 +47,12 @@
 </script>
 
 <div class="w-screen h-screen dark fixed app">
-  <TheNavbar {wordLength} {charLength} />
+  <TheNavbar
+    {wordLength}
+    {charLength}
+    {isDark}
+    on:toggleDarkMode={toggleThemeValue}
+  />
   <main
     class="flex h-[80vh] min-w-full justify-between border-t-2 border-dashed border-red-300 dark:border-gray-400"
   >
@@ -47,7 +75,7 @@
   <div
     class="!min-h-[100%]  border-t-2 border-dashed border-red-300 dark:border-gray-400"
   >
-    <TheFooter />
+    <TheFooter on:toggleDarkMode={toggleThemeValue} {isDark} />
   </div>
 </div>
 
