@@ -2,8 +2,7 @@
 
 # Markyll|<small> minimalist markdown editor</small>
 
-This is a minimalist Markdown editor built using [Svelte](https://www.svelte.dev) and [windicss](https://www.windicss.org) by [Michael Nji](https://www.github.com/michaelnji) for his personal projects. The source code can be found over at his [github](https://www.github.com/michaelnji/markyll) <br>
-You can learn more about markdown [here](https://www.markdown.com)
+This is a minimalist Markdown editor built using [Svelte](https://www.svelte.dev) and [windicss](https://www.windicss.org) by [Michael Nji](https://www.github.com/michaelnji) for his personal projects. You can learn more about markdown [here](https://www.markdown.com)
 
 PS: markdown also supports some html tags too!😉
 
