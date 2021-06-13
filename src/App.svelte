@@ -49,7 +49,7 @@
   $: charLength = source ? source.toString().split("").length : 0;
 </script>
 
-<div class="w-screen h-screen dark fixed app">
+<div class="w-screen h-full dark fixed app">
   <!-- Navbar -->
   <TheNavbar
     {wordLength}
