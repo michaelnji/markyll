@@ -176,7 +176,7 @@
       {/if}
     </button>
     <div
-      class="font-semibold text-xl text-center text-red-400 font-mono dark:text-gray-900 mr-8"
+      class="font-semibold text-xl text-center text-red-400 font-mono dark:text-gray-900 mr-8 sm:text-sm"
     >
       {#if charLength <= 1}
         {charLength} character
@@ -185,7 +185,7 @@
       {/if}
     </div>
     <div
-      class="font-semibold text-red-400 font-mono dark:text-gray-900 text-xl"
+      class="font-semibold text-red-400 font-mono dark:text-gray-900 text-xl sm:text-sm"
     >
       {#if wordLength <= 1}
         {wordLength} word
