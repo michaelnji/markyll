@@ -39,7 +39,7 @@
    ![Markyll Logo](${imgUrl})
 
  This is a minimalist Markdown editor built using [Svelte](https://www.svelte.dev) and [windicss](https://www.windicss.org) by [Michael Nji](https://www.github.com/michaelnji) for his personal projects. The source code can be found over at his [github](https://www.github.com/michaelnji/markyll) <br>
- You can learn more about markdown [here](https://www.markdown.com)
+ You can learn more about markdown [here](https://www.markdownguide.org/)
 
  PS: markdown also supports some html tags too!😉
 
@@ -49,7 +49,7 @@
   $: charLength = source ? source.toString().split("").length : 0;
 </script>
 
-<div class="w-screen h-full dark  app">
+<div class="w-screen min-h-screen dark app">
   <!-- Navbar -->
   <TheNavbar
     {wordLength}
@@ -58,7 +58,7 @@
     on:toggleDarkMode={toggleThemeValue}
   />
   <main
-    class="flex h-[80vh] min-w-full justify-between border-t-2 border-dashed border-red-300 dark:border-gray-400"
+    class="flex  min-w-full justify-between border-t-2 border-dashed border-red-300 dark:border-gray-400  h-[80vh]"
   >
     <!-- left panel, the editor -->
     <TheMarkdownEditor>
@@ -66,7 +66,7 @@
         id="textarea"
         bind:value={source}
         placeholder="Enter your Markdown 👍🏾"
-        class="bg-red-100 dark:bg-gray-700 dark:text-red-50  text-gray-600 min-w-full scrollbar scrollbar-w-2 scrollbar-thumb-red-300 dark:scrollbar-thumb-gray-400 prose scrollbar-thumb-rounded-[9999px] scrollbar-track-red-100 dark:scrollbar-track-gray-300 !min-h-full !max-h-full !border-none prose overflow-auto !outline-none p-8 placeholder-opacity-40 placeholder-red-400 font-mono text-2xl dark:text-opacity-90 dark:placeholder-red-50 dark:placeholder-opacity-60"
+        class="bg-red-100 dark:bg-gray-700 dark:text-red-50  text-gray-600 min-w-full scrollbar scrollbar-w-2 scrollbar-thumb-red-300 dark:scrollbar-thumb-gray-400 prose scrollbar-thumb-rounded-[9999px] scrollbar-track-red-100 dark:scrollbar-track-gray-300 h-[100%] sm:h-[70vh] !border-none prose overflow-auto !outline-none p-8 placeholder-opacity-40 placeholder-red-400 font-mono py-10 text-2xl dark:text-opacity-90 dark:placeholder-red-50 dark:placeholder-opacity-60"
       />
     </TheMarkdownEditor>
     <!-- right panel, the preview styled using the prose class from tailwindcss( sorry, windicss) -->

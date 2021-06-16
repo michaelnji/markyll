@@ -81,83 +81,83 @@
 </script>
 
 <header
-  class="pr-3 bg-red-50 dark:bg-gray-500 !max-w-full flex items-center justify-between"
+  class="pr-3 bg-red-50 dark:bg-gray-500 !max-w-full flex  justify-between sm:h-[10vh]"
 >
   <ul
-    class=" lg:flex w-[80%] hidden !max-w-full h-full items-center justify-around nav-list"
+    class=" lg:flex w-[80%] hidden !max-w-full items-center justify-around nav-list"
   >
     <li
-      class="h1 text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="h1 text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       h1
     </li>
     <li
-      class="h2 text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear"
+      class="h2 text-red-400 font-bold text-xl  h-full flex items-center cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear"
     >
       h2
     </li>
     <li
-      class="h3 text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="h3 text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       h3
     </li>
     <li
-      class="h4 text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="h4 text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       h4
     </li>
     <li
-      class="h5 text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="h5 text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       h5
     </li>
     <li
-      class="h6 text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="h6 text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       h6
     </li>
     <li
-      class="tool-bold text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="tool-bold text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       <b class="tool-bold">b</b>
     </li>
     <li
-      class="tool-italics text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="tool-italics text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       <i class="tool-italics">i</i>
     </li>
     <li
-      class="tool-del text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="tool-del text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       <del class="tool-del">del</del>
     </li>
     <li
-      class="tool-quotes text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="tool-quotes text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       “
     </li>
     <li
-      class="tool-list-ul text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="tool-list-ul text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       •
     </li>
     <li
-      class="tool-list-ol text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="tool-list-ol text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       1.
     </li>
     <li
-      class="tool-links text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="tool-links text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       🔗
     </li>
     <li
-      class="tool-images text-red-400 font-bold text-xl  py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="tool-images text-red-400 font-bold text-xl  h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       🖼️
     </li>
     <li
-      class="tool-save py-3 cursor-pointer hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
+      class="tool-save h-full flex items-center hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 dark:text-gray-900 border-dashed text-center px-4 transition-all duration-150 ease-linear "
     >
       <button class="tool-save btn btn-green">export</button>
     </li>
