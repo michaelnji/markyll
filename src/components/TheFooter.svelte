@@ -20,7 +20,7 @@
     <ul class="flex items-center justify-end">
       <li>
         <button
-          class="btn btn-red px-2 text-2xl dark:bg-gray-700 "
+          class="btn btn-red px-2 text-xl dark:bg-gray-700 "
           on:click={toggleDarkMode}
         >
           {#if isDark}
@@ -33,7 +33,7 @@
       <li>
         <a
           href="https://www.github.com/michaelnji/markyll"
-          class="btn btn-black py-3 mx-3  text-sm">🦊Github</a
+          class="btn btn-black py-3 mx-3  text-[0.8rem]">🦊Github</a
         >
       </li>
     </ul>
