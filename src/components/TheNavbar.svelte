@@ -49,17 +49,17 @@
 >
   <ul class=" flex lg:w-[80%] h-full !w-full justify-around nav-list">
     <li
-      class="tool-images text-xl cursor-pointer  !min-h-full flex items-center w-full justify-center  hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400  dark:hover:bg-gray-400  border-dashed text-center px-2 transition-all duration-150 ease-linear "
+      class="tool-images text-xl cursor-pointer  !min-h-full flex items-center w-full justify-center  hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400  dark:hover:bg-gray-400  border-dashed text-center px-2 transition-all duration-150 ease-linear  "
     >
       🖼️
     </li>
     <li
-      class="tool-links  text-xl cursor-pointer  !min-h-full flex items-center w-full justify-center  hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400  dark:hover:bg-gray-400  border-dashed text-center px-2 transition-all duration-150 ease-linear"
+      class="tool-links  text-xl cursor-pointer  !min-h-full flex items-center w-full justify-center  hover:bg-red-100 border-r-2 border-red-200 dark:border-gray-400  dark:hover:bg-gray-400  border-dashed text-center px-2 transition-all duration-150 ease-linear  "
     >
       🔗
     </li>
     <li
-      class="tool-save h-full flex items-center w-full  py-2 justify-center border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 border-dashed text-center  transition-all duration-150 ease-linear "
+      class="tool-save h-full flex items-center w-full    py-2 justify-center lg:border-r-2 border-red-200 dark:border-gray-400 dark:hover:bg-gray-400 border-dashed text-center  transition-all duration-150 ease-linear "
     >
       <button class="tool-save btn btn-green">export</button>
     </li>

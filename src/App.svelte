@@ -66,7 +66,7 @@
         id="textarea"
         bind:value={source}
         placeholder="Enter your Markdown 👍🏾"
-        class="bg-red-100 dark:bg-gray-700 dark:text-red-50  text-gray-600 min-w-full scrollbar scrollbar-w-2 pt-22 scrollbar-thumb-red-300 dark:scrollbar-thumb-gray-400 prose scrollbar-thumb-rounded-[9999px] scrollbar-track-red-100 dark:scrollbar-track-gray-300 !border-none prose overflow-auto !outline-none p-8 placeholder-opacity-40 placeholder-red-400 font-mono py-10 text-2xl dark:text-opacity-90 dark:placeholder-red-50 dark:placeholder-opacity-60"
+        class="bg-red-100 dark:bg-gray-700 dark:text-red-50  text-gray-600 min-w-full scrollbar scrollbar-w-2  scrollbar-thumb-red-300 dark:scrollbar-thumb-gray-400 prose scrollbar-thumb-rounded-[9999px] scrollbar-track-red-100 dark:scrollbar-track-gray-300 !border-none prose overflow-auto !outline-none px-8 placeholder-opacity-40 placeholder-red-400 font-mono py-30 text-2xl dark:text-opacity-90 dark:placeholder-red-50 dark:placeholder-opacity-60 h-full"
       />
     </TheMarkdownEditor>
     <!-- right panel, the preview styled using the prose class from tailwindcss( sorry, windicss) -->
